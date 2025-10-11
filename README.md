@@ -5,6 +5,15 @@ A browser extension that provides real-time media bias analysis using the LNK.az
 [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/cavidaga/lnk-browser-extension)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Language](https://img.shields.io/badge/language-JavaScript-yellow.svg)](https://github.com/cavidaga/lnk-browser-extension)
+[![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Available-brightgreen.svg)](https://chromewebstore.google.com/detail/lnk-media-bias-analyzer/lclhkkckmddipgmiaiahijeaealoikjm)
+
+## 🚀 Available on Chrome Web Store
+
+**Get the extension directly from the Chrome Web Store:**
+
+[![Add to Chrome](https://img.shields.io/badge/Add%20to%20Chrome-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](https://chromewebstore.google.com/detail/lnk-media-bias-analyzer/lclhkkckmddipgmiaiahijeaealoikjm)
+
+The extension is now publicly available on the Chrome Web Store, making it easy to install and use for all Chrome users.
 
 ## Features
 
@@ -25,6 +34,20 @@ The extension automatically detects articles on major news websites including:
 - **And many more...**
 
 ## Installation
+
+### Option 1: Chrome Web Store (Recommended)
+
+**For Chrome users**, install directly from the Chrome Web Store:
+
+[![Add to Chrome](https://img.shields.io/badge/Add%20to%20Chrome-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](https://chromewebstore.google.com/detail/lnk-media-bias-analyzer/lclhkkckmddipgmiaiahijeaealoikjm)
+
+1. Click the "Add to Chrome" button above
+2. Click "Add extension" in the Chrome Web Store
+3. The extension will be automatically installed and ready to use
+
+### Option 2: Manual Installation (For Development)
+
+For Firefox, Edge, or development purposes:
 
 1. **Clone the repository**:
    ```bash
@@ -122,8 +145,27 @@ The extension supports Chrome, Firefox, and Edge with the same codebase. The bui
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+## Chrome Web Store
+
+The extension is available on the Chrome Web Store with the following details:
+
+- **Store URL**: [LNK Media Bias Analyzer](https://chromewebstore.google.com/detail/lnk-media-bias-analyzer/lclhkkckmddipgmiaiahijeaealoikjm)
+- **Version**: 1.0.0
+- **Size**: 24.97 KiB
+- **Languages**: English
+- **Developer**: cavid@cavid.info
+
+### Store Features
+
+- ✅ One-click installation from Chrome Web Store
+- ✅ Automatic updates
+- ✅ Verified by Google
+- ✅ Privacy-focused data handling
+- ✅ No account registration required
+
 ## Support
 
+- **Chrome Web Store**: [Rate and Review](https://chromewebstore.google.com/detail/lnk-media-bias-analyzer/lclhkkckmddipgmiaiahijeaealoikjm)
 - **Documentation**: [docs/](docs/)
 - **Issues**: [GitHub Issues](https://github.com/cavidaga/lnk-browser-extension/issues)
 - **LNK.az**: [https://lnk.az](https://lnk.az)
