@@ -39,12 +39,12 @@ document.addEventListener('DOMContentLoaded', async () => {
           showNoAnalysis();
         }
       } catch (error) {
-        console.warn('Could not check if page is news article:', error);
+        // Could not check if page is news article, show no analysis state
         showNoAnalysis();
       }
     }
   } catch (error) {
-    console.error('Popup initialization error:', error);
+    // Popup initialization error
     showError('Genişlənmə başlatıla bilmədi');
   }
 });
@@ -92,7 +92,7 @@ async function loadCachedAnalysis() {
       return false; // No cached analysis found
     }
   } catch (error) {
-    console.error('Error loading cached analysis:', error);
+    // Error loading cached analysis
     return false; // Error occurred, no cached analysis
   }
 }
@@ -117,8 +117,8 @@ async function analyzeCurrentPage() {
       showError(response.error || 'Təhlil zamanı xəta baş verdi');
     }
   } catch (error) {
-    console.error('Analysis error:', error);
-    showError('Təhlil zamanı xəta baş verdi: ' + error.message);
+    // Analysis error
+    showError(`Təhlil zamanı xəta baş verdi: ${error.message}`);
   }
 }
 
