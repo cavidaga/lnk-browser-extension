@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+No changes yet.
+
+## [1.0.0] - 2025-10-10
+
 ### Added
 - Initial release of LNK Browser Extension
 - One-click analysis of news articles
@@ -30,17 +34,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Manifest V3 compliance
 - Content Security Policy implementation
 - Service worker architecture
-- Chrome storage API integration
+- Storage API integration
 - Cross-origin request handling
 - Icon optimization for all required sizes
-
-## [1.0.0] - 2025-01-27
-
-### Added
-- Initial release
-- Core analysis functionality
-- Browser extension infrastructure
-- Documentation and installation guides
 
 ---
 
@@ -72,6 +68,6 @@ When adding entries to this changelog, please follow these guidelines:
 
 - [LNK.az Website](https://lnk.az)
 - [GitHub Repository](https://github.com/cavidaga/lnk-browser-extension)
-- [Chrome Web Store](https://chrome.google.com/webstore/detail/lnk-media-bias-analyzer/your-extension-id)
+- [Chrome Web Store](https://chromewebstore.google.com/detail/lnk-media-bias-analyzer/lclhkkckmddipgmiaiahijeaealoikjm)
 - [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/lnk-media-bias-analyzer/)
-- [Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/lnk-media-bias-analyzer/your-extension-id)
+- [Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/lnk-media-bias-analyzer/fkplnhodhplcookmgcnhehmfgaeffffd)
