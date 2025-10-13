@@ -9,29 +9,7 @@ A browser extension that provides real-time media bias analysis using the LNK.az
 [![Firefox Add-ons](https://img.shields.io/badge/Firefox%20Add--ons-Available-ff7139.svg)](https://addons.mozilla.org/en-US/firefox/addon/lnk-media-bias-analyzer/)
 [![Microsoft Edge Add-ons](https://img.shields.io/badge/Microsoft%20Edge%20Add--ons-Available-0078D7.svg)](https://microsoftedge.microsoft.com/addons/detail/lnk-media-bias-analyzer/fkplnhodhplcookmgcnhehmfgaeffffd)
 
-## 🚀 Available on Chrome Web Store
-
-**Get the extension directly from the Chrome Web Store:**
-
-[![Add to Chrome](https://img.shields.io/badge/Add%20to%20Chrome-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](https://chromewebstore.google.com/detail/lnk-media-bias-analyzer/lclhkkckmddipgmiaiahijeaealoikjm)
-
-The extension is now publicly available on the Chrome Web Store, making it easy to install and use for all Chrome users.
-
-## 🚀 Available on Firefox Add-ons
-
-**Get the extension on Firefox Add-ons:**
-
-[![Add to Firefox](https://img.shields.io/badge/Add%20to%20Firefox-FF7139?style=for-the-badge&logo=firefoxbrowser&logoColor=white)](https://addons.mozilla.org/en-US/firefox/addon/lnk-media-bias-analyzer/)
-
-The extension is approved and live on Mozilla Add-ons (AMO).
-
-## 🚀 Available on Microsoft Edge Add-ons
-
-**Get the extension on Microsoft Edge Add-ons:**
-
-[![Add to Edge](https://img.shields.io/badge/Add%20to%20Edge-0078D7?style=for-the-badge&logo=microsoftedge&logoColor=white)](https://microsoftedge.microsoft.com/addons/detail/lnk-media-bias-analyzer/fkplnhodhplcookmgcnhehmfgaeffffd)
-
-The extension is approved and live on Microsoft Edge Add-ons.
+<!-- Store badges are shown above; removing duplicate store-specific sections to avoid repetition. -->
 
 ## Features
 
@@ -53,16 +31,7 @@ The extension automatically detects articles on major news websites including:
 
 ## Installation
 
-### Install from Browser Stores (Recommended)
-
-Choose your browser and install directly from its store:
-
-[![Add to Chrome](https://img.shields.io/badge/Add%20to%20Chrome-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](https://chromewebstore.google.com/detail/lnk-media-bias-analyzer/lclhkkckmddipgmiaiahijeaealoikjm)
-[![Add to Firefox](https://img.shields.io/badge/Add%20to%20Firefox-FF7139?style=for-the-badge&logo=firefoxbrowser&logoColor=white)](https://addons.mozilla.org/en-US/firefox/addon/lnk-media-bias-analyzer/)
-[![Add to Edge](https://img.shields.io/badge/Add%20to%20Edge-0078D7?style=for-the-badge&logo=microsoftedge&logoColor=white)](https://microsoftedge.microsoft.com/addons/detail/lnk-media-bias-analyzer/fkplnhodhplcookmgcnhehmfgaeffffd)
-
-1. Click the button above for your browser
-2. Confirm the install dialog; the extension will be added automatically
+Install from your browser's store using the badges at the top of this README, or use manual installation for development below.
 
 ### Manual Installation (Development)
 
@@ -164,23 +133,7 @@ The extension supports Chrome, Firefox, and Edge with the same codebase. The bui
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Chrome Web Store
-
-The extension is available on the Chrome Web Store with the following details:
-
-- **Store URL**: [LNK Media Bias Analyzer](https://chromewebstore.google.com/detail/lnk-media-bias-analyzer/lclhkkckmddipgmiaiahijeaealoikjm)
-- **Version**: 1.0.0
-- **Size**: 24.97 KiB
-- **Languages**: English
-- **Developer**: cavid@cavid.info
-
-### Store Features
-
-- ✅ One-click installation from Chrome Web Store
-- ✅ Automatic updates
-- ✅ Verified by Google
-- ✅ Privacy-focused data handling
-- ✅ No account registration required
+<!-- Removed mid-page Store Listings to reduce repetition; links remain at top and in Support. -->
 
 ## Support
 
