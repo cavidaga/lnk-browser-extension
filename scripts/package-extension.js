@@ -94,27 +94,54 @@ async function updateManifestForBrowser(browser, browserDir) {
   // Browser-specific manifest updates
   switch (browser) {
     case 'firefox':
-      // Firefox-specific configurations
-      manifest.browser_specific_settings = {
-        gecko: {
-          id: 'lnk-media-bias-analyzer@lnk.az',
-          strict_min_version: '91.0'
+      // Convert to Manifest V2 for Firefox
+      const firefoxManifest = {
+        manifest_version: 2,
+        name: manifest.name,
+        version: manifest.version,
+        description: manifest.description,
+        permissions: [
+          "activeTab",
+          "storage",
+          "tabs",
+          "https://lnk.az/*"
+        ],
+        background: {
+          scripts: ["background.js"],
+          persistent: false
+        },
+        content_scripts: manifest.content_scripts,
+        browser_action: {
+          default_popup: manifest.action.default_popup,
+          default_title: manifest.action.default_title,
+          default_icon: manifest.action.default_icon
+        },
+        icons: manifest.icons,
+        web_accessible_resources: manifest.web_accessible_resources.map(resource => resource.resources).flat(),
+        content_security_policy: "script-src 'self'; object-src 'self'",
+        browser_specific_settings: {
+          gecko: {
+            id: 'lnk-media-bias-analyzer@lnk.az',
+            strict_min_version: '91.0'
+          }
         }
       };
+      
+      await fs.writeJson(manifestPath, firefoxManifest, { spaces: 2 });
       break;
       
     case 'edge':
       // Edge-specific configurations
       manifest.minimum_chrome_version = '88.0.4324.150';
+      await fs.writeJson(manifestPath, manifest, { spaces: 2 });
       break;
       
     case 'chrome':
       // Chrome-specific configurations
       manifest.minimum_chrome_version = '88.0.4324.150';
+      await fs.writeJson(manifestPath, manifest, { spaces: 2 });
       break;
   }
-  
-  await fs.writeJson(manifestPath, manifest, { spaces: 2 });
 }
 
 // Run packaging if called directly
