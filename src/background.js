@@ -25,6 +25,11 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
       .then(result => sendResponse({ success: true, data: result }))
       .catch(error => sendResponse({ success: false, error: error.message }));
     return true;
+  } else if (request.action === 'getAnalysisByHash') {
+    getAnalysisByHash(request.hash)
+      .then(result => sendResponse({ success: true, data: result }))
+      .catch(error => sendResponse({ success: false, error: error.message }));
+    return true;
   }
 });
 
@@ -37,10 +42,10 @@ async function analyzeArticle(url, modelType = 'auto') {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'User-Agent': 'LNK-Extension/1.0'
+        'User-Agent': 'LNK-Extension/2.0'
       },
       body: JSON.stringify({
-        url: url,
+        url: decodeURIComponent(url),
         modelType: modelType
       })
     });
@@ -51,15 +56,24 @@ async function analyzeArticle(url, modelType = 'auto') {
     }
 
     const data = await response.json();
+    console.log('API Response:', data);
+    
+    // Check if response has the expected structure
+    if (!data.scores && !data.meta) {
+      console.error('API Error Details:', data);
+      throw new Error(data.error || 'Invalid API response structure');
+    }
     
     // Store analysis result in chrome storage
     const analysisKey = `analysis_${encodeURIComponent(url)}`;
+    const analysisData = {
+      ...data,
+      analyzedAt: new Date().toISOString(),
+      url: url
+    };
+    
     await chrome.storage.local.set({
-      [analysisKey]: {
-        ...data,
-        analyzedAt: new Date().toISOString(),
-        url: url
-      }
+      [analysisKey]: analysisData
     });
 
     // Update recent analyses list
@@ -83,7 +97,7 @@ async function analyzeArticle(url, modelType = 'auto') {
     
     await chrome.storage.local.set({ [recentKey]: recentAnalyses });
 
-    return data;
+    return analysisData;
   } catch (error) {
     console.error('Analysis error:', error);
     throw error;
@@ -110,6 +124,36 @@ async function getRecentAnalyses() {
   } catch (error) {
     console.error('Error getting recent analyses:', error);
     return [];
+  }
+}
+
+// Get analysis by hash from API
+async function getAnalysisByHash(hash) {
+  try {
+    console.log(`Fetching analysis by hash: ${hash}`);
+    
+    const response = await fetch(`https://lnk.az/api/get-analysis?id=${encodeURIComponent(hash)}`, {
+      method: 'GET',
+      headers: {
+        'User-Agent': 'LNK-Extension/2.0'
+      }
+    });
+
+    if (!response.ok) {
+      if (response.status === 404) {
+        throw new Error('Analysis not found');
+      }
+      const errorData = await response.json().catch(() => ({}));
+      throw new Error(errorData.message || `HTTP ${response.status}: ${response.statusText}`);
+    }
+
+    const data = await response.json();
+    console.log('Analysis fetched by hash:', data);
+    
+    return data;
+  } catch (error) {
+    console.error('Error fetching analysis by hash:', error);
+    throw error;
   }
 }
 

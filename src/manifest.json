@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "LNK Media Bias Analyzer",
-  "version": "1.0.0",
-  "description": "Analyze media bias and reliability of news articles using LNK.az AI technology",
+  "version": "2.0.0",
+  "description": "Analyze media bias and reliability of news articles using LNK.az AI technology. Get instant analysis with reliability scores and political bias indicators.",
   "permissions": [
     "activeTab",
     "storage",

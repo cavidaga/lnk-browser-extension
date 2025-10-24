@@ -92,35 +92,40 @@
         position: fixed;
         top: 20px;
         right: 20px;
-        background: #0c0d12;
-        color: white;
-        padding: 12px 16px;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background: linear-gradient(135deg, #11131a, #0c0d12);
+        color: #e9edf3;
+        padding: 16px 20px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,.35);
+        font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Inter, 'Helvetica Neue', Arial, 'Noto Sans';
         font-size: 14px;
+        font-weight: 500;
         z-index: 10000;
         cursor: pointer;
-        border: 1px solid #333;
-        max-width: 300px;
+        border: 1px solid #2a2d3a;
+        max-width: 320px;
         opacity: 0;
         transform: translateY(-10px);
         transition: all 0.3s ease;
       ">
-        <div style="display: flex; align-items: center; gap: 8px;">
+        <div style="display: flex; align-items: center; gap: 12px;">
           <div style="
-            width: 8px;
-            height: 8px;
+            width: 10px;
+            height: 10px;
             background: #10b981;
             border-radius: 50%;
             animation: pulse 2s infinite;
+            box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.3);
           "></div>
-          <span>LNK tərəfindən təhlil edilə bilər</span>
+          <span style="font-weight: 600;">LNK tərəfindən təhlil edilə bilər</span>
         </div>
         <div style="
           font-size: 12px;
-          color: #9ca3af;
-          margin-top: 4px;
+          color: #8e97ab;
+          margin-top: 6px;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          font-weight: 500;
         ">
           Genişlənməni açın və təhlil edin
         </div>

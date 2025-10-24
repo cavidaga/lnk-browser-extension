@@ -1,5 +1,21 @@
 /* LNK Media Bias Analyzer - Popup Styles */
 
+:root {
+  --bg: #0a0b0f;
+  --card: #11131a;
+  --panel: #1a1d26;
+  --border: #2a2d3a;
+  --text: #e9edf3;
+  --muted: #8e97ab;
+  --accent: #10b981;
+  --accent-2: #059669;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --ring: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,11 +23,11 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Inter, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
   font-size: 14px;
   line-height: 1.5;
-  color: #e5e7eb;
-  background: #0c0d12;
+  color: var(--text);
+  background: var(--bg);
   width: 380px;
   min-height: 500px;
 }
@@ -29,8 +45,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 16px 20px;
-  background: #121622;
-  border-bottom: 1px solid #1f2433;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
 }
 
 .logo {
@@ -39,34 +55,38 @@ body {
   gap: 8px;
   font-weight: 700;
   font-size: 16px;
-  color: #10b981;
+  color: var(--accent);
 }
 
 .logo svg {
-  color: #10b981;
+  color: var(--accent);
 }
 
 .status {
   font-size: 12px;
-  color: #9ca3af;
+  color: var(--muted);
   padding: 4px 8px;
-  background: #1f2433;
+  background: var(--panel);
   border-radius: 4px;
+  border: 1px solid var(--border);
 }
 
 .status.analyzing {
-  color: #f59e0b;
+  color: var(--warning);
   background: #451a03;
+  border-color: var(--warning);
 }
 
 .status.error {
-  color: #ef4444;
-  background: #450a0a;
+  color: var(--error);
+  background: #2d1b1b;
+  border-color: var(--error);
 }
 
 .status.success {
-  color: #10b981;
-  background: #064e3b;
+  color: var(--success);
+  background: #1b2d1b;
+  border-color: var(--success);
 }
 
 /* Content */
@@ -85,8 +105,8 @@ body {
 .spinner {
   width: 32px;
   height: 32px;
-  border: 3px solid #1f2433;
-  border-top: 3px solid #10b981;
+  border: 3px solid var(--panel);
+  border-top: 3px solid var(--accent);
   border-radius: 50%;
   animation: spin 1s linear infinite;
   margin: 0 auto 16px;
@@ -183,7 +203,7 @@ body {
 
 .score-label {
   font-size: 12px;
-  color: #9ca3af;
+  color: var(--muted);
   margin-bottom: 8px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -196,16 +216,16 @@ body {
 }
 
 .reliability .score-value {
-  color: #10b981;
+  color: var(--success);
 }
 
 .bias .score-value {
-  color: #ef4444;
+  color: var(--error);
 }
 
 .score-bar {
   height: 4px;
-  background: #1f2433;
+  background: var(--panel);
   border-radius: 2px;
   overflow: hidden;
 }
@@ -220,7 +240,7 @@ body {
 .bias-indicator {
   position: relative;
   height: 4px;
-  background: #1f2433;
+  background: var(--panel);
   border-radius: 2px;
   margin-top: 8px;
 }
@@ -278,23 +298,23 @@ body {
 }
 
 .btn-primary {
-  background: #10b981;
+  background: var(--accent);
   color: white;
 }
 
 .btn-primary:hover {
-  background: #059669;
+  background: var(--accent-2);
   transform: translateY(-1px);
 }
 
 .btn-secondary {
-  background: #1f2433;
-  color: #e5e7eb;
-  border: 1px solid #374151;
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--border);
 }
 
 .btn-secondary:hover {
-  background: #374151;
+  background: var(--border);
   transform: translateY(-1px);
 }
 
@@ -319,19 +339,19 @@ body {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 8px;
-  color: #e5e7eb;
+  color: var(--text);
 }
 
 .no-analysis p {
-  color: #9ca3af;
+  color: var(--muted);
   margin-bottom: 24px;
 }
 
 /* Footer */
 .popup-footer {
   padding: 16px 20px;
-  background: #121622;
-  border-top: 1px solid #1f2433;
+  background: var(--card);
+  border-top: 1px solid var(--border);
 }
 
 .footer-links {
@@ -341,14 +361,14 @@ body {
 }
 
 .footer-links a {
-  color: #9ca3af;
+  color: var(--muted);
   text-decoration: none;
   font-size: 12px;
   transition: color 0.2s ease;
 }
 
 .footer-links a:hover {
-  color: #10b981;
+  color: var(--accent);
 }
 
 .footer-info {
@@ -356,7 +376,7 @@ body {
 }
 
 .footer-info small {
-  color: #6b7280;
+  color: var(--muted);
   font-size: 11px;
 }
 

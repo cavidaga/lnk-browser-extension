@@ -9,6 +9,34 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 No changes yet.
 
+## [2.0.0] - 2025-01-27
+
+### Added
+- **Modern Design System**: Complete UI redesign matching current LNK.az website
+- **CSS Variables**: Modern design system with consistent colors and typography
+- **Enhanced API Integration**: Updated to work with current LNK.az API endpoints
+- **Better Error Handling**: Improved error messages and API response validation
+- **Data Structure Support**: Compatible with both legacy and new API response formats
+- **Poppins Font**: Enhanced typography for better readability
+- **Dark Theme**: Beautiful dark theme with improved contrast
+- **Modern Visual Indicators**: Sleek overlay indicators with improved animations
+- **Responsive Design**: Optimized for all screen sizes
+- **Enhanced Accessibility**: Better contrast and keyboard navigation
+
+### Changed
+- **UI/UX**: Complete redesign of popup interface and content script indicators
+- **API Integration**: Updated endpoints and improved data handling
+- **Performance**: Optimized caching and storage management
+- **Code Structure**: Cleaner, more maintainable codebase
+- **Manifest**: Updated to version 2.0.0 with improved permissions
+
+### Technical
+- **CSS Variables**: Implemented modern design system with CSS custom properties
+- **API Compatibility**: Support for both old and new API response formats
+- **Error Handling**: Enhanced error handling and user feedback
+- **Storage**: Improved local storage and caching mechanisms
+- **Cross-browser**: Enhanced compatibility across Chrome, Firefox, and Edge
+
 ## [1.0.0] - 2025-10-10
 
 ### Added
@@ -42,6 +70,7 @@ No changes yet.
 
 ## Version History
 
+- **2.0.0**: Major redesign with modern UI and enhanced API integration
 - **1.0.0**: Initial release with core functionality
 - **Unreleased**: Future features and improvements
 

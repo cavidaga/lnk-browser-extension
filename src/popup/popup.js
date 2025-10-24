@@ -145,9 +145,14 @@ function displayAnalysisResults(analysis) {
   document.getElementById('articleUrl').textContent = analysis.meta?.original_url || currentTab.url;
   document.getElementById('articlePublication').textContent = analysis.meta?.publication || 'Naməlum';
   
-  // Update scores
-  const reliability = analysis.scores?.reliability?.value || 0;
-  const bias = analysis.scores?.political_establishment_bias?.value || 0;
+  // Update scores - handle both old and new data structures
+  const reliability = typeof analysis.scores?.reliability === 'object' 
+    ? analysis.scores.reliability.value || analysis.scores.reliability.score || 0
+    : analysis.scores?.reliability || 0;
+    
+  const bias = typeof analysis.scores?.political_establishment_bias === 'object'
+    ? analysis.scores.political_establishment_bias.value || analysis.scores.political_establishment_bias.score || 0
+    : analysis.scores?.political_establishment_bias || 0;
   
   document.getElementById('reliabilityScore').textContent = `${Math.round(reliability)}/100`;
   document.getElementById('biasScore').textContent = formatBiasScore(bias);

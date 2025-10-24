@@ -1,8 +1,8 @@
 # LNK Media Bias Analyzer - Browser Extension
 
-A browser extension that provides real-time media bias analysis using the LNK.az AI technology. Analyze news articles directly in your browser with one click.
+A modern browser extension that provides real-time media bias analysis using the LNK.az AI technology. Analyze news articles directly in your browser with one click, featuring a sleek design that matches the current LNK.az website.
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/cavidaga/lnk-browser-extension)
+[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/cavidaga/lnk-browser-extension)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Language](https://img.shields.io/badge/language-JavaScript-yellow.svg)](https://github.com/cavidaga/lnk-browser-extension)
 [![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Available-brightgreen.svg)](https://chromewebstore.google.com/detail/lnk-media-bias-analyzer/lclhkkckmddipgmiaiahijeaealoikjm)
@@ -13,13 +13,16 @@ A browser extension that provides real-time media bias analysis using the LNK.az
 
 ## Features
 
-- **One-Click Analysis**: Analyze any news article with a single click
-- **Real-time Indicators**: Visual indicators appear on news websites
-- **Bias Scoring**: Reliability (0-100) and political bias (-5 to +5) analysis
-- **Caching**: Results are cached locally for faster access
-- **Azerbaijani Language**: Full UI support in Azerbaijani
-- **Cross-Platform**: Works on Chrome, Firefox, and Edge
-- **Privacy-Focused**: Only sends article URLs to LNK.az API
+- **🎯 One-Click Analysis**: Analyze any news article with a single click
+- **✨ Modern Design**: Sleek interface matching the current LNK.az website design
+- **📊 Advanced Scoring**: Reliability (0-100) and political bias (-5 to +5) analysis
+- **⚡ Smart Caching**: Results are cached locally for faster access
+- **🌍 Azerbaijani Language**: Full UI support in Azerbaijani
+- **🔒 Privacy-Focused**: Only sends article URLs to LNK.az API
+- **🌐 Cross-Platform**: Works on Chrome, Firefox, and Edge
+- **🎨 Dark Theme**: Beautiful dark theme with modern visual indicators
+- **📱 Responsive**: Optimized for all screen sizes
+- **🔄 Real-time Updates**: Visual indicators appear automatically on news websites
 
 ## Supported Websites
 
@@ -60,10 +63,12 @@ For local development or manual loading:
 
 ## Usage
 
-1. **Automatic Detection**: The extension automatically detects news articles and shows a green indicator
-2. **Manual Analysis**: Click the extension icon to analyze the current page
-3. **View Results**: See reliability and bias scores in the popup
-4. **Full Analysis**: Click "Tam təhlil" to view detailed analysis on LNK.az
+1. **🔍 Automatic Detection**: The extension automatically detects news articles and shows a modern green indicator
+2. **🖱️ Manual Analysis**: Click the extension icon to analyze the current page
+3. **📊 View Results**: See reliability and bias scores in the sleek popup interface
+4. **🔗 Full Analysis**: Click "Tam təhlil" to view detailed analysis on LNK.az
+5. **💾 Cached Results**: Previously analyzed articles load instantly from cache
+6. **🎨 Visual Indicators**: Modern overlay indicators show analysis results directly on the page
 
 ## Development
 
@@ -97,15 +102,42 @@ lnk-browser-extension/
 
 ### API Integration
 
-The extension integrates with the LNK.az API:
+The extension integrates with the updated LNK.az API:
 
-- **Analysis Endpoint**: `POST /api/analyze`
-- **Cached Results**: `GET /api/get-analysis`
-- **Full Analysis**: `GET /analysis/:hash`
+- **Analysis Endpoint**: `POST /api/analyze` - Submit articles for analysis
+- **Cached Results**: `GET /api/get-analysis?id=:hash` - Retrieve analysis by hash
+- **Full Analysis**: `GET /analysis/:hash` - View detailed analysis on website
+- **Enhanced Error Handling**: Improved API response validation and error messages
+- **Data Structure Support**: Compatible with both legacy and new API response formats
 
 ### Building for Different Browsers
 
 The extension supports Chrome, Firefox, and Edge with the same codebase. The build process automatically generates browser-specific manifests when needed.
+
+## What's New in v2.0.0
+
+### 🎨 **Modern Design System**
+- **Updated UI**: Complete redesign matching the current LNK.az website
+- **CSS Variables**: Modern design system with consistent colors and typography
+- **Poppins Font**: Enhanced typography for better readability
+- **Dark Theme**: Beautiful dark theme with improved contrast
+
+### 🔧 **Technical Improvements**
+- **Enhanced API Integration**: Updated to work with current LNK.az API endpoints
+- **Better Error Handling**: Improved error messages and API response validation
+- **Data Structure Support**: Compatible with both old and new API response formats
+- **Performance**: Optimized caching and storage management
+
+### 🎯 **User Experience**
+- **Modern Indicators**: Sleek visual indicators with improved animations
+- **Responsive Design**: Optimized for all screen sizes
+- **Better Feedback**: Enhanced loading states and user interactions
+- **Improved Accessibility**: Better contrast and keyboard navigation
+
+### 🛠️ **Developer Experience**
+- **Updated Manifest**: Version 2.0.0 with improved permissions
+- **Better Code Structure**: Cleaner, more maintainable codebase
+- **Enhanced Documentation**: Comprehensive README and code comments
 
 ## Contributing
 
@@ -146,7 +178,21 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Changelog
 
-See [CHANGELOG.md](CHANGELOG.md) for a list of changes and version history.
+### v2.0.0 (Latest)
+- 🎨 Complete UI redesign matching LNK.az website
+- 🔧 Updated API integration with current endpoints
+- ✨ Modern design system with CSS variables
+- 🎯 Enhanced user experience and visual indicators
+- 📱 Improved responsive design
+- 🛠️ Better error handling and data structure support
+
+### v1.0.0
+- 🚀 Initial release with core functionality
+- 📊 Basic bias analysis and reliability scoring
+- 🌍 Azerbaijani language support
+- 🔒 Privacy-focused design
+
+See [CHANGELOG.md](CHANGELOG.md) for detailed version history.
 
 ---
 
