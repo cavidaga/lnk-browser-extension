@@ -1,0 +1,53 @@
+{
+  "manifest_version": 2,
+  "name": "LNK Media Bias Analyzer",
+  "version": "2.0.0",
+  "description": "Analyze media bias and reliability of news articles using LNK.az AI technology. Get instant analysis with reliability scores and political bias indicators.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs",
+    "https://lnk.az/*"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Analyze this page with LNK",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png"
+  },
+  "web_accessible_resources": [
+    "popup/popup.css"
+  ],
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "lnk-media-bias-analyzer@lnk.az",
+      "strict_min_version": "91.0"
+    }
+  }
+}

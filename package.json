@@ -1,6 +1,6 @@
 {
   "name": "lnk-browser-extension",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "LNK Media Bias Analyzer - Browser Extension for analyzing media bias and reliability",
   "main": "src/manifest.json",
   "scripts": {
